@@ -1,24 +1,61 @@
+import React, { FormEvent, useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import {db} from '@/components/containers/utils/firebase';
+
 const Form = () => {
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const createdat = new Date();
+    const formattedCreatedAt = createdat.toLocaleString('en-US', {
+        weekday: 'long', // "Monday"
+        year: 'numeric', // "2023"
+        month: 'long', // "April"
+        day: 'numeric', // "13"
+        hour: '2-digit', // "12 AM"
+        minute: '2-digit', // "00"
+        second: '2-digit' // "00"
+    });
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        try {
+            await addDoc(collection(db, 'BusyBar'), {
+                name: fullName,
+                email: email,
+                phone: phone,
+                createdAt: formattedCreatedAt,
+            });
+            setIsSubmitted(true);
+            console.log('done')
+        } catch (err) {
+            console.error('Error saving data:', err);
+        }
+    };
+
     return (
-        
         <><div className="container d-flex justify-content-center">
             <div className="col-12 col-lg-6 col-xxl-6 ">
                 <h2 className="mb-2">How It Works:</h2>
-                <ol >
-                <li className="mb-2"><span className="grd">Sign up:</span> Enter your email address below to join the waitlist. It only takes a few seconds!</li>
-                <li className="mb-2"><span className="grd">Spread the word:</span> Share the excitement with your friends and invite them to join the waitlist too. The more, the merrier!</li>
-                <li><span className="grd">Stay tuned:</span> Keep an eye on your inbox for updates and exclusive sneak peeks as we gear up for the app launch. The countdown to an epic nightlife adventure begins now!</li>
+                <ol>
+                    <li className="mb-2"><span className="grd">Sign up:</span> Enter your email address below to join the waitlist. It only takes a few seconds!</li>
+                    <li className="mb-2"><span className="grd">Spread the word:</span> Share the excitement with your friends and invite them to join the waitlist too. The more, the merrier!</li>
+                    <li><span className="grd">Stay tuned:</span> Keep an eye on your inbox for updates and exclusive sneak peeks as we gear up for the app launch. The countdown to an epic nightlife adventure begins now!</li>
                 </ol>
             </div>
         </div><section className="section contact-main reduced-margin-top">
                 <div className="container d-flex justify-content-center">
                     <div className="col-12 col-lg-6 col-xxl-6 ">
+                    {isSubmitted ? (
+              <p className="text-xl text-center font-bold">Form submitted! We will get back to you shortly.</p> 
+            ) : (
                         <div
                             className="contact-main__form"
                             data-aos="fade-up"
                             data-aos-duration="600"
                         >
-                            <form action="#" method="post">
+                            <form method="POST" onSubmit={handleSubmit}>
                                 <div
                                     className="group-input"
                                     data-aos="fade-up"
@@ -29,7 +66,10 @@ const Form = () => {
                                         type="text"
                                         name="contact-name"
                                         id="contactName"
-                                        placeholder="enter full name" />
+                                        placeholder="Enter full name"
+                                        value={fullName}
+                                        onChange={(e) => setFullName(e.target.value)}
+                                        required />
                                 </div>
                                 <div
                                     className="group-input"
@@ -40,7 +80,10 @@ const Form = () => {
                                         type="email"
                                         name="contact-email"
                                         id="contactEmail"
-                                        placeholder="enter Your Email" />
+                                        placeholder="Enter your email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required />
                                 </div>
                                 <div
                                     className="group-input"
@@ -51,61 +94,26 @@ const Form = () => {
                                         type="phone"
                                         name="contact-phone"
                                         id="contactPhone"
-                                        placeholder="enter Your Phone" />
+                                        placeholder="Enter your phone"
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
+                                        required />
                                 </div>
-
-                                {/*
-<div
-className="group-input"
-data-aos="fade-up"
-data-aos-duration="600"
->
-<select className="subject">
-<option data-display="Select Subject">
-Select Subject
-</option>
-<option value="1">Account</option>
-<option value="2">Service</option>
-<option value="3">Pricing</option>
-<option value="4">Support</option>
-</select>
-</div>
-
-<div
-className="group-input"
-data-aos="fade-up"
-data-aos-duration="600"
->
-<textarea
-name="contact-message"
-id="contactMessage"
-placeholder="Write a message"
-></textarea>
-</div>
-<div className="group-radio">
-<input
-type="checkbox"
-name="contact-check"
-id="contactCheck"
-/>
-<label htmlFor="contactCheck">
-I accept your terms & conditions
-</label>
-</div>
-*/}
-                                <div className="form-cta d-flex justify-content-center">
-                                    <button type="submit" className="btn btn--nonary">
-                                        Become a Beta Tester
-                                        <i className="fa-solid fa-paper-plane"></i>
-                                    </button>
-                                </div>
+                                
+                                    <div className="form-cta d-flex justify-content-center">
+                                        <button type="submit" className="btn btn--nonary">
+                                            Become a Beta Tester
+                                            <i className="fa-solid fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                    
                             </form>
                         </div>
+            )}
                     </div>
                 </div>
-
             </section></>
-  );
+    );
 };
 
 export default Form;

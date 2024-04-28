@@ -50,7 +50,7 @@ const Features = () => {
                             <p>
                           Get exclusive access to the app before it's released to the public. Be one of the very first to experience BusyBar and its innovative features firsthand.
                             </p>
-                            <Link href="/register">
+                            <Link href="#contactus">
                               get started now
                               <i className="tech-arrow-top"></i>
                             </Link>
@@ -73,7 +73,7 @@ const Features = () => {
                             <p>
                             As a waitlist member, you'll receive special perks and privileges, including early access to updates, sneak peeks at upcoming features, and more.
                             </p>
-                            <Link href="/sign-in">
+                            <Link href="#contactus">
                               join now
                               <i className="tech-arrow-top"></i>
                             </Link>
@@ -96,7 +96,7 @@ const Features = () => {
                             <p>
                             Your feedback matters! By joining the waitlist, you'll have the opportunity to provide valuable input and help shape the direction of the app.
                             </p>
-                            <Link href="/register">
+                            <Link href="#contactus">
                               Lets get going
                               <i className="tech-arrow-top"></i>
                             </Link>
@@ -118,7 +118,7 @@ const Features = () => {
                             <p>
                             Explore the city like never before with our app's curated selection of top-notch venues and events. Uncover hidden gems and create unforgettable memories with friends.
                             </p>
-                            <Link href="/sign-in">
+                            <Link href="#contactus">
                               Request A Demo
                               <i className="tech-arrow-top"></i>
                             </Link>

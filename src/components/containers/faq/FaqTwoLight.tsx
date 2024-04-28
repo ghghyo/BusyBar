@@ -78,33 +78,37 @@ const FaqTwoLight = () => {
               </div>
             </div>
             <div className={activeTab ? "stactive faq-tab-content" : "faq-tab-content"}>
-              <div className="accordion" id="accordion">
+              <div className="accordion" id="accordion" >
                 {faqs.map((faq, index) => (
-                  <div className="accordion-item" key={index} data-aos="fade-up" data-aos-duration="600">
-                    <h5 className="accordion-header" id={`heading${index}`}>
-                      <button
-                        className={`accordion-button ${imgTab === index ? "" : "collapsed"}`}
-                        onClick={() => setImgTab(imgTab === index ? null : index)}
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#collapse${index}`}
-                        aria-expanded={imgTab === index}
-                        aria-controls={`collapse${index}`}
-                      >
-                        {faq.question}
-                      </button>
-                    </h5>
-                    <div
-                      id={`collapse${index}`}
-                      className={`accordion-collapse collapse ${imgTab === index ? "show" : ""}`}
-                      aria-labelledby={`heading${index}`}
-                      data-bs-parent="#accordion"
-                    >
-                      <div className="accordion-body">
-                        {faq.answer}
-                      </div>
-                    </div>
-                  </div>
+                 <div className="accordion-item" key={index} data-aos="fade-up" data-aos-duration="600">
+                 <h5 className="accordion-header" id={`heading${index}`} >
+                   <button
+                     className={`accordion-button ${imgTab === index ? "" : "collapsed"}`}
+                     onClick={() => setImgTab(imgTab === index ? null : index)}
+                     type="button"
+                     data-bs-toggle="collapse"
+                     data-bs-target={`#collapse${index}`}
+                     aria-expanded={imgTab === index}
+                     aria-controls={`collapse${index}`}
+                    // Inline style for text wrapping
+                   >
+                     {faq.question}
+                   </button>
+                 </h5>
+                 <div
+                   id={`collapse${index}`}
+                   className={`accordion-collapse collapse ${imgTab === index ? "show" : ""}`}
+                   aria-labelledby={`heading${index}`}
+                   data-bs-parent="#accordion"
+                   
+                 >
+                   <div className="accordion-body">
+                    <p>
+                     {faq.answer}
+                     </p>
+                   </div>
+                 </div>
+               </div>
                 ))}
               </div>
             </div>

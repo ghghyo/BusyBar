@@ -38,7 +38,7 @@ const BannerTwo = () => {
               Discover hidden gems and unlock the potential of renonwed bars, clubs, pubs and restraunts like never before
               </p>
               <div className="section__content-cta">
-                <Link href="/register" className="btn btn--senary">
+                <Link href="#contactus" className="btn btn--senary">
                 Get Access
                 </Link>
                 <p>Unlock Your Day and NightLife potential and join the 1000s of users who use busybar everyday.

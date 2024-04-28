@@ -101,7 +101,7 @@ Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBa
                 data-aos="fade-up"
                 data-aos-duration="600"
               >
-                <Link href="/contact-us" className="btn btn--senary">
+                <Link href="#contactus" className="btn btn--senary">
                   Become a tester
                 </Link>
                 <Image src={Frame} alt="Image" />
