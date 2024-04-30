@@ -137,24 +137,24 @@ const GenerateTwo = () => {
                   activeTabIndex === 1 ? "active" : ""
                 }`}
               >
-                <Image src={Thumb2} alt="image" />
+                <Image src={Thumb2} alt="image" style={{ height: '900px' }} />
               </div>
               <div
                 className={`tab-content ${
                   activeTabIndex === 2 ? "active" : ""
                 }`}
               >
-                <Image src={Thumb} alt="image" />
+                <Image src={Thumb} alt="image" style={{ height: '900px' }}  />
               </div>
               <div
                 className={`tab-content ${
                   activeTabIndex === 3 ? "active" : ""
                 }`}
               >
-                <Image src={Thumb} alt="image" />
+                <Image src={Thumb} alt="image" style={{ height: '900px' }}  />
               </div>
               <div className="anime">
-                <Image src={Anime} alt="Image"  />
+                <Image src={Anime} alt="Image"  style={{ height: '900px' }}  />
               </div>
               
             </div>
