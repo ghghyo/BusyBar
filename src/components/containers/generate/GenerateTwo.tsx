@@ -31,7 +31,7 @@ const GenerateTwo = () => {
   };
 
   return (
-    <section className="section generate pb-0">
+    <section className="section generate pb-0 reduced-margin-top">
       <div className="container">
         <div className="row items-gap">
           <div className="col-12 col-lg-7 col-xl-7">
@@ -130,7 +130,7 @@ const GenerateTwo = () => {
                   activeTabIndex === 0 ? "active" : ""
                 }`}
               >
-                <Image src={Thumb} alt="image" />
+                <Image src={Thumb} alt="image" style={{ height: '900px' }} />
               </div>
               <div
                 className={`tab-content ${
@@ -154,7 +154,7 @@ const GenerateTwo = () => {
                 <Image src={Thumb} alt="image" />
               </div>
               <div className="anime">
-                <Image src={Anime} alt="Image" />
+                <Image src={Anime} alt="Image"  />
               </div>
               
             </div>
