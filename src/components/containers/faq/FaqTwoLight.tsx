@@ -59,14 +59,12 @@ const FaqTwoLight = () => {
   ];
 
   return (
-    <section className="section faq-two faq-light pb-0">
+    <section className="section faq-two faq-light pb-0 reduced-margin-top">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12">
             <div
               className="section__header--secondary"
-              data-aos="fade-up"
-              data-aos-duration="600"
             >
               <div className="row align-items-center items-gap">
                 <div className="col-12 col-xl-7">
@@ -80,7 +78,7 @@ const FaqTwoLight = () => {
             <div className={activeTab ? "stactive faq-tab-content" : "faq-tab-content"}>
               <div className="accordion" id="accordion" >
                 {faqs.map((faq, index) => (
-                 <div className="accordion-item" key={index} data-aos="fade-up" data-aos-duration="600">
+                 <div className="accordion-item" key={index} >
                  <h5 className="accordion-header" id={`heading${index}`} >
                    <button
                      className={`accordion-button ${imgTab === index ? "" : "collapsed"}`}

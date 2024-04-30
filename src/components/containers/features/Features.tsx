@@ -9,13 +9,13 @@ import "swiper/css";
 const Features = () => {
   return (
     <section className="section features">
-                  <div className="section__header" data-aos="fade-up" data-aos-duration="600">
+                  <div className="section__header" >
               <h4 className="h2">Join the Exclusive Waitlist for BusyBar!</h4>
               <p className="grd"> Elevate your nightlife experience! <br></br>Sign up now to secure your spot on the waitlist and revolutionize the way you explore the city after dark.</p>
               
             </div>
       <div className="feature-wrapper">
-        <div className="container" data-aos="fade-up" data-aos-duration="600">
+        <div className="container" >
           <div className="row justify-content-center">
             <div className="col-12 col-xl-9">
               <Swiper

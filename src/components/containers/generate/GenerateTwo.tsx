@@ -35,7 +35,7 @@ const GenerateTwo = () => {
       <div className="container">
         <div className="row items-gap">
           <div className="col-12 col-lg-7 col-xl-7">
-            <div className="generate__content" data-aos="fade-up" data-aos-duration="600">
+            <div className="generate__content" >
               <div className="section__header text-start">
                 <h3 className="h2">
                 Wherever you are in
@@ -59,6 +59,7 @@ const GenerateTwo = () => {
                     Embark on your adventure with a quick sign-up! Dive into a world of endless exploration and excitement as you uncover hidden gems and thrilling experiences.
                     </p>
                   </div>
+                  
                 </div>
                 <div
                   className={`generate__content-btn ${
@@ -75,6 +76,7 @@ const GenerateTwo = () => {
                     Navigate effortlessly through a diverse array of venues and discover the perfect vibe for your night out! From intimate hideaways to bustling hotspots, find the ideal setting to match your mood.
                     </p>
                   </div>
+                  
                 </div>
                 <div
                   className={`generate__content-btn ${
@@ -82,15 +84,19 @@ const GenerateTwo = () => {
                   }`}
                   onClick={() => handleTabClick(2)}
                 >
+                  
                   <div className="thumb">
                     <i className="tech-mike"></i>
+                    
                   </div>
                   <div className="content">
-                    <h5 className="h5">Monitor Crowd Flow & Peak Times</h5>
+                    <h5 className="h5">Monitor Crowd Flow & Peak Times </h5>
+                    
                     <p>
                     Stay ahead of the curve with real-time crowd monitoring! Easily gauge the flow of people and identify peak times to ensure you're always at the heart of the action, minus the crowds.
                     </p>
                   </div>
+                  
                 </div>
                 <div
                   className={`generate__content-btn ${
@@ -107,15 +113,17 @@ const GenerateTwo = () => {
                     Spread the excitement and amplify the fun with friends! Seamlessly share your favorite spots and unforgettable moments, turning every outing into an epic adventure.
                     </p>
                   </div>
+                  
                 </div>
+                
               </div>
+              
             </div>
+
           </div>
           <div className="col-12 col-lg-5 col-xl-5">
             <div
               className="generate__thumb"
-              data-aos="fade-up"
-              data-aos-duration="600"
             >
               <div
                 className={`tab-content ${

@@ -62,9 +62,12 @@ const HomeTwoLight = () => {
       <div id="aboutus">
       <GenerateTwo />
       </div>
+      <div id="contactus">
+      <Form />
+      </div>
       <Publish />
       <TeamOne />
-      <TourTwoLight />
+      {/*<TourTwoLight /> */}
       <hr id="horizon-break" />
       <Features />
       {/*<PricingOne />*/}
@@ -73,9 +76,7 @@ const HomeTwoLight = () => {
       </div>
       
       <AboutSponsor />
-      <div id="contactus">
-      <Form />
-      </div>
+
       {/*
       <CtaTwoLight />
       <Tools />

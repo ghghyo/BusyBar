@@ -22,7 +22,7 @@ const BannerTwo = () => {
               data-aos="fade-up"
               data-aos-duration="600"
             >
-              <h1 className="h3">the best time of your life, without the wait</h1>
+              <h1 className="h2">the best time of your life, <br className="block md:hidden"></br>without the wait</h1>
               <h2 className="h3">
                 <span id="textTyped">
                   <TypedText
@@ -34,22 +34,21 @@ const BannerTwo = () => {
                   />
                 </span>
               </h2>
-              <p className="text-lg">
+              <p className="text-md">
               Discover hidden gems and unlock the potential of renonwed bars, clubs, pubs and restraunts like never before
               </p>
               <div className="section__content-cta">
                 <Link href="#contactus" className="btn btn--senary">
                 Get Access
                 </Link>
-                <p>Unlock Your Day and NightLife potential and join the 1000s of users who use busybar everyday.
-Free For Life For The First 1000 Users
-</p> {/* change this more creative TODO*/}
+                
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="anime">
+        {/*
         <Image src={One} alt="Image" className="one" />
         <Image src={Two} alt="Image" className="two" />
         <Image src={Three} alt="Image" className="three" />

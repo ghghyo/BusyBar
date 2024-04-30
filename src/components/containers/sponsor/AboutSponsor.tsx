@@ -18,8 +18,7 @@ const AboutSponsor = () => {
           <div className="col-12">
             <div
               className="sponsor__inner"
-              data-aos="fade-up"
-              data-aos-duration="600"
+
             >
               <div className="section__header">
                 <h4 className="h4">Past experiences our users have tried</h4>

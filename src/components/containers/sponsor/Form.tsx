@@ -35,7 +35,7 @@ const Form = () => {
     };
 
     return (
-        <><div className="container d-flex justify-content-center">
+        <><div className="container d-flex justify-content-center mt-5">
             <div className="col-12 col-lg-6 col-xxl-6 ">
                 <h2 className="mb-2">How It Works:</h2>
                 <ol>
@@ -52,15 +52,12 @@ const Form = () => {
             ) : (
                         <div
                             className="contact-main__form"
-                            data-aos="fade-up"
-                            data-aos-duration="600"
+
                         >
                             <form method="POST" onSubmit={handleSubmit}>
                                 <div
                                     className="group-input"
-                                    data-aos="fade-up"
-                                    data-aos-duration="600"
-                                    data-aos-delay="600"
+
                                 >
                                     <input
                                         type="text"
@@ -73,8 +70,7 @@ const Form = () => {
                                 </div>
                                 <div
                                     className="group-input"
-                                    data-aos="fade-up"
-                                    data-aos-duration="600"
+
                                 >
                                     <input
                                         type="email"
@@ -87,8 +83,7 @@ const Form = () => {
                                 </div>
                                 <div
                                     className="group-input"
-                                    data-aos="fade-up"
-                                    data-aos-duration="600"
+
                                 >
                                     <input
                                         type="phone"

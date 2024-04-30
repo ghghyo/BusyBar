@@ -35,11 +35,11 @@ const TeamOne = () => {
   ];
 
   return (
-    <section className="section pb-0 testimonial">
+    <section className="section pb-0 testimonial reduced-margin-top">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="section__header" data-aos="fade-up" data-aos-duration="600">
+            <div className="section__header" >
               <h4 className="h2">See why our beta testers can't get enough!</h4>
               <p className="grd"> Join a vibrant community of urban explorers who rave about our app's simplicity and awesomeness.</p>
             </div>

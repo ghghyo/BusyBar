@@ -8,7 +8,7 @@ import Discover from "public/images/discover.jpg";
 
 const Publish = () => {
   return (
-    <section className="section publish">
+    <section className="section publish reduced-margin-top">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-10">
@@ -17,8 +17,7 @@ const Publish = () => {
                 <div className="col-12">
                   <div
                     className="section__header"
-                    data-aos="fade-up"
-                    data-aos-duration="600"
+
                   >
                     <h2 className="h2">
                       You choose the mood, we create the crowd
@@ -31,13 +30,12 @@ const Publish = () => {
                 <div className="col-12 col-sm-6 col-lg-4">
                   <div
                     className="publish__single"
-                    data-aos="fade-up"
-                    data-aos-duration="600"
+
                   >
                   <div className="flex mb-5 justify-center items-center h-32 w-32" style={{ marginLeft: '10%' }}> {/* Adjust height and width as needed */}
                     <Image src={Laid}
                       alt="Descriptive Alt Text"
-                      width={200} // Set the width of the image
+                      width={220} // Set the width of the image
                       height={200} // Set the height of the image
                       style={{ borderRadius: '15px' }} 
                     />
@@ -53,13 +51,12 @@ const Publish = () => {
                 <div className="col-12 col-sm-6 col-lg-4">
                   <div
                     className="publish__single"
-                    data-aos="fade-up"
-                    data-aos-duration="600"
+
                   >
                   <div className="flex mb-5 justify-center items-center h-32 w-32" style={{ marginLeft: '10%' }}> {/* Adjust height and width as needed */}
                     <Image src={NightLife}
                       alt="Descriptive Alt Text"
-                      width={200} // Set the width of the image
+                      width={220} // Set the width of the image
                       height={200} // Set the height of the image
                       style={{ borderRadius: '15px' }} 
                     />
@@ -75,14 +72,12 @@ Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBa
                 <div className="col-12 col-sm-6 col-lg-4">
                   <div
                     className="publish__single"
-                    data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aos-delay="600"
+
                   >
                   <div className="flex mb-5 justify-center items-center h-32 w-32" style={{ marginLeft: '10%' }}> {/* Adjust height and width as needed */}
                     <Image src={Discover}
                       alt="Descriptive Alt Text"
-                      width={200} // Set the width of the image
+                      width={220} // Set the width of the image
                       height={200} // Set the height of the image
                       style={{ borderRadius: '15px' }} 
                     />
@@ -98,10 +93,8 @@ Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBa
               </div>
               <div
                 className="section__content-cta text-center"
-                data-aos="fade-up"
-                data-aos-duration="600"
               >
-                <Link href="#contactus" className="btn btn--senary">
+                <Link href="#contactus" className="btn btn--senary ">
                   Become a tester
                 </Link>
                 <Image src={Frame} alt="Image" />

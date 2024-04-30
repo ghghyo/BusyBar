@@ -45,19 +45,19 @@
 // banner two
 
 .banner-two {
-  padding: 310px 0px 220px;
+  padding: 150px 0px 20px;
   overflow: hidden !important;
   position: relative;
   background-image: url("../../../public/images/banner/banner-two-bg-light.png");
-  background-size: auto 70%;
+  background-size: auto 100%;
   background-position: center center;
   background-repeat: no-repeat;
   &::before {
     content: "";
     position: absolute;
-    top: 25%;
-    left: 10%;
-    @include box(60px);
+    top: 15%;
+    left: 80%;
+    @include box(100px);
     background: url("../../../public/images/banner/circle.png");
     background-size: cover;
     background-position: center center;
@@ -74,13 +74,15 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-top: 30px;
+      
     }
 
+
     p {
-      max-width: 530px;
+      max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 
@@ -146,6 +148,7 @@
       transform: translateX(-50%);
       animation-direction: reverse;
     }
+
   }
 }
 
