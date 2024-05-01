@@ -15,7 +15,8 @@ interface HeaderProps {
 }
 
 const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
-  const closeNav = () => {
+  const closeNav = (event: React.MouseEvent) => {
+    event.stopPropagation();
     setOpenNav(false);
     setOpenSubMenu(null);
   };
@@ -77,38 +78,30 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
   let logoSrcMobile = LogoLight;
 
   const getPageHeaderClass = (pathname: string): string => {
-    if (pathname === "/") {
-      /*
-      logoSrc = LogoDark;
-      logoSrcMobile = LogoDark;
-      return "header--dark";
-      replacing index original code so we can have light theme
-      */
-      logoSrc = LogoTwoLight;
-      logoSrcMobile = LogoTwoLight;
-      return "header--light header-two";
-    } else if (pathname === "/index-light") {
-      logoSrc = LogoLight;
-      logoSrcMobile = LogoLight;
-      return "";
-    } else if (pathname === "/index-two") {
-      logoSrc = LogoTwoDark;
-      logoSrcMobile = LogoTwoDark;
-      return "header--dark header-two";
-    } else if (pathname === "/index-two-light") {
-      logoSrc = LogoTwoLight;
-      logoSrcMobile = LogoTwoLight;
-      return "header--light header-two";
-    } else if (pathname === "/index-three") {
-      logoSrc = LogoThreeDark;
-      logoSrcMobile = LogoThreeDark;
-      return "header--dark";
-    } else if (pathname === "/index-three-light") {
-      logoSrc = LogoLight;
-      logoSrcMobile = LogoLight;
-      return "header--light";
+    switch (pathname) {
+      case "/":
+        logoSrc = LogoTwoLight;
+        logoSrcMobile = LogoTwoLight;
+        return "header--light header-two";
+      case "/index-light":
+        return "";
+      case "/index-two":
+        logoSrc = LogoTwoDark;
+        logoSrcMobile = LogoTwoDark;
+        return "header--dark header-two";
+      case "/index-two-light":
+        logoSrc = LogoTwoLight;
+        logoSrcMobile = LogoTwoLight;
+        return "header--light header-two";
+      case "/index-three":
+        logoSrc = LogoThreeDark;
+        logoSrcMobile = LogoThreeDark;
+        return "header--dark";
+      case "/index-three-light":
+        return "header--light";
+      default:
+        return "";
     }
-    return "";
   };
 
   const router = useRouter();
@@ -148,81 +141,11 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                     </button>
                   </div>
                   <ul className="nav__menu-items">
-                    {/*
-                    <li className="nav__menu-item nav__menu-item--dropdown">
-                      <a
-                        className={`nav__menu-link nav__menu-link--dropdown ${isSubMenuButton(
-                          "home"
-                        )}`}
-                        onClick={() => handleSubmenu("home")}
-                      >
-                        Home
-                      </a>
-                      <div
-                        className={`nav__dropdown nav__dropdown--alt ${isSubMenuOpen(
-                          "home"
-                        )}`}
-                      >
-                        <ul>
-                          
-                          <li>
-                            <Link
-                              className="nav__dropdown-item hide-nav"
-                              href="/"
-                            >
-                              Home 01
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              className="nav__dropdown-item hide-nav"
-                              href="/index-two"
-                            >
-                              Home 02
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              className="nav__dropdown-item hide-nav"
-                              href="/index-three"
-                            >
-                              Home 03
-                            </Link>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <Link
-                              className="nav__dropdown-item hide-nav"
-                              href="/index-light"
-                            >
-                              Home 01 Light
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              className="nav__dropdown-item hide-nav"
-                              href="/index-two-light"
-                            >
-                              Home 02 Light
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              className="nav__dropdown-item hide-nav"
-                              href="/index-three-light"
-                            >
-                              Home 03 Light
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    */}
                     <li className="nav__menu-item">
                       <Link
                         href="#aboutus"
-                        className="nav__menu-link hide-nav"
+                        className={`nav__menu-link hide-nav${openNav ? ' mb-4' : ''}`}
+                        onClick={closeNav}
                       >
                         About
                       </Link>
@@ -231,6 +154,7 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                       <Link
                         href="#faqtwolight"
                         className="nav__menu-link hide-nav"
+                        onClick={closeNav}
                       >
                         FAQ
                       </Link>
@@ -239,122 +163,11 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                       <Link
                         href="#contactus"
                         className="nav__menu-link hide-nav"
+                        onClick={closeNav}
                       >
                         Contact Us
                       </Link>
                     </li>
-                    {/*
-                    <li className="nav__menu-item nav__menu-item--dropdown">
-                      <a
-                        className={`nav__menu-link nav__menu-link--dropdown ${isSubMenuButton(
-                          "pages"
-                        )}`}
-                        onClick={() => handleSubmenu("pages")}
-                      >
-                        Pages
-                      </a>
-                      <ul className={`nav__dropdown ${isSubMenuOpen("pages")}`}>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/error"
-                          >
-                            Error
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/register"
-                          >
-                            Sign Up
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/sign-in"
-                          >
-                            Sign In
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/teams"
-                          >
-                            Our Teams
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/about-us"
-                          >
-                            About Us
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/contact-us"
-                          >
-                            Contact Us
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="nav__menu-item nav__menu-item--dropdown">
-                      <a
-                        className={`nav__menu-link nav__menu-link--dropdown ${isSubMenuButton(
-                          "blog"
-                        )}`}
-                        onClick={() => handleSubmenu("blog")}
-                      >
-                        Blog
-                      </a>
-                      <ul className={`nav__dropdown ${isSubMenuOpen("blog")}`}>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/blog"
-                          >
-                            Blog Layout One
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/blog-two"
-                          >
-                            Blog Layout Two
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="nav__dropdown-item hide-nav"
-                            href="/blog-single"
-                          >
-                            Blog Single
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="nav__menu-item">
-                      <Link
-                        href="/contact-us"
-                        className="nav__menu-link hide-nav"
-                      >
-                        Contact Us
-                      </Link>
-                    </li>
-                      
-                    <li className="nav__menu-item d-block d-md-none">
-                      <Link href="/register" className="btn btn--secondary">
-                        Sign Up
-                      </Link>
-                    </li>
-                    */}
                   </ul>
                   <div className="social">
                     <Link href="/" aria-label="social media">
@@ -373,7 +186,6 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                 </div>
                 <div className="nav__uncollapsed">
                   <div className="nav__uncollapsed-item d-none d-md-flex">
-
                   </div>
                   <button
                     className={
@@ -394,7 +206,10 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
       </div>
       <div
         className={(openNav ? " backdrop-active" : " ") + " backdrop"}
-        onClick={closeNav}
+        onClick={() => {
+          setOpenNav(false);
+          setOpenSubMenu(null);
+        }}
       ></div>
     </header>
   );

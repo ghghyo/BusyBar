@@ -27,7 +27,7 @@ const FooterTwoLight = () => {
     <footer className="footer-two section bg-img footer-two-alter reduced-margin-top">
       <div className="container">
         <div className="row items-gap-two">
-          <div className="col-5 col-sm-5 col-xl-4 col-xxl-5">
+          <div className="col-10 col-sm-5 col-xl-4 col-xxl-5">
             <div className="footer-two__single bt">
               <Link href="/" passHref>
                 <Image src={Logo} alt="Image" width={128} height={64} />
@@ -45,9 +45,9 @@ const FooterTwoLight = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-sm-2 col-xl-2 col-xxl-2">
+          <div className="col-10 col-xl-2 col-xxl-2">
             <div className="footer-two__single" >
-              <h5 className="h5">About BusyBar</h5>
+              <h5 className="h5 ">About BusyBar</h5>
               <ul>
                 <li>
                   <Link href="/#aboutus">About</Link>
@@ -91,7 +91,7 @@ const FooterTwoLight = () => {
             </div>
           </div>
   */}
-          <div className="col-8 col-sm-4 col-xl-5 col-xxl-5">
+          <div className="col-12 col-xl-5 col-xxl-5">
             <div className="footer-two__single" >
               <h5 className="h5">Get Started</h5>
               <div className="footer-two__form">

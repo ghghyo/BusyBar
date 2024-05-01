@@ -49,10 +49,10 @@ const Layout = ({ children, header, footer }: layoutProps) => {
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-        <title>TechAi | AI Toolkit React Template</title>
-        <meta name="keywords" content="techai, ai, toolkit" />
-        <meta name="description" content="AI Toolkit React Template" />
+        <link rel="shortcut icon" href="/busybarlogo.png" type="image/x-icon" />
+        <title>BusyBar</title>
+        <meta name="keywords" content="bar, ai, nightlife" />
+        <meta name="description" content="AI Busiest Bar Tool" />
       </Head>
       <div className={`${combinedClasses}${openNav ? " body-active" : " "}`}>
         {header && (

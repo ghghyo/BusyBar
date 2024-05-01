@@ -37,11 +37,11 @@ const Form = () => {
     return (
         <><div className="container d-flex justify-content-center mt-5">
             <div className="col-12 col-lg-6 col-xxl-6 ">
-                <h2 className="mb-2">How It Works:</h2>
+                <h2 className="mb-3">How It Works:</h2>
                 <ol>
-                    <li className="mb-2"><span className="grd">Sign up:</span> Enter your email address below to join the waitlist. It only takes a few seconds!</li>
-                    <li className="mb-2"><span className="grd">Spread the word:</span> Share the excitement with your friends and invite them to join the waitlist too. The more, the merrier!</li>
-                    <li><span className="grd">Stay tuned:</span> Keep an eye on your inbox for updates and exclusive sneak peeks as we gear up for the app launch. The countdown to an epic nightlife adventure begins now!</li>
+                    <li className="mb-3"><span className="grd">Sign up:</span> Enter your email address below to join the waitlist. It only takes a few seconds!</li>
+                    <li className="mb-3"><span className="grd">Spread the word:</span> Share the excitement with your friends and invite them to join the waitlist too. The more, the merrier!</li>
+                    <li className="mb-3"><span className="grd">Stay tuned:</span> Keep an eye on your inbox for updates and exclusive sneak peeks as we gear up for the app launch. The countdown to an epic nightlife adventure begins now!</li>
                 </ol>
             </div>
         </div><section className="section contact-main reduced-margin-top">

@@ -32,10 +32,10 @@ const Publish = () => {
                     className="publish__single"
 
                   >
-                  <div className="flex mb-5 justify-center items-center h-32 w-32" style={{ marginLeft: '10%' }}> {/* Adjust height and width as needed */}
+                  <div className="flex mb-5 justify-center items-center h-32 w-32 mobile-margin-left"> {/* Adjust height and width as needed */}
                     <Image src={Laid}
                       alt="Descriptive Alt Text"
-                      width={220} // Set the width of the image
+                      width={280} // Set the width of the image
                       height={200} // Set the height of the image
                       style={{ borderRadius: '15px' }} 
                     />
@@ -53,10 +53,10 @@ const Publish = () => {
                     className="publish__single"
 
                   >
-                  <div className="flex mb-5 justify-center items-center h-32 w-32" style={{ marginLeft: '10%' }}> {/* Adjust height and width as needed */}
+                  <div className="flex mb-5 justify-center items-center h-32 w-32 mobile-margin-left" > {/* Adjust height and width as needed */}
                     <Image src={NightLife}
                       alt="Descriptive Alt Text"
-                      width={220} // Set the width of the image
+                      width={280} // Set the width of the image
                       height={200} // Set the height of the image
                       style={{ borderRadius: '15px' }} 
                     />
@@ -74,10 +74,10 @@ Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBa
                     className="publish__single"
 
                   >
-                  <div className="flex mb-5 justify-center items-center h-32 w-32" style={{ marginLeft: '10%' }}> {/* Adjust height and width as needed */}
+                  <div className="flex mb-5 justify-center items-center h-32 w-32 mobile-margin-left"> {/* Adjust height and width as needed */}
                     <Image src={Discover}
                       alt="Descriptive Alt Text"
-                      width={220} // Set the width of the image
+                      width={280} // Set the width of the image
                       height={200} // Set the height of the image
                       style={{ borderRadius: '15px' }} 
                     />

@@ -59,7 +59,7 @@ const FaqTwoLight = () => {
   ];
 
   return (
-    <section className="section faq-two faq-light pb-0 reduced-margin-top">
+    <section className="section faq-two faq-light pb-0 reduced-margin-top" >
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12">
@@ -71,7 +71,6 @@ const FaqTwoLight = () => {
                   <h2 className="h2">Frequently Asked Questions</h2>
                 </div>
                 <div className="col-12 col-xl-5">
-
                 </div>
               </div>
             </div>
