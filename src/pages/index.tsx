@@ -58,14 +58,15 @@ import Form from "@/components/containers/sponsor/Form";
 const HomeTwoLight = () => {
   return (
     <Layout header={true} footer={4}>
+      <div id="contactus">
       <BannerTwo />
+      </div>
+      <Publish />
+
       <div id="aboutus">
       <GenerateTwo />
       </div>
-      <div id="contactus">
-      <Form />
-      </div>
-      <Publish />
+      
       <TeamOne />
       {/*<TourTwoLight /> */}
       <hr id="horizon-break" />

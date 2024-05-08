@@ -12,10 +12,13 @@ import 'swiper/css/autoplay'; // Autoplay module CSS
 const Features = () => {
   return (
     <section className="section features">
+      
       <div className="section__header">
-        <h4 className="h2">Join the Exclusive Waitlist for BusyBar!</h4>
+        <h2 className="grd">More Reasons Why You Should Become A Better Tester</h2>
+        {/*
         <p className="grd"> Elevate your nightlife experience! <br></br>Sign up now to secure your spot on the waitlist and revolutionize the way you explore the city after dark.</p>
-      </div>
+  */}
+        </div>
       <div className="feature-wrapper">
         <div className="container">
           <div className="row justify-content-center">
@@ -31,23 +34,24 @@ const Features = () => {
                     prevEl: ".prev-feature",
                   }}
                   autoplay={{
-                    delay: 3000,
+                    delay: 4000,
                     disableOnInteraction: false,  // Continue autoplay after interaction
                   }}
                   className="features__slider"
                 >
                 <SwiperSlide>
-                  <div className="features__slider-single">
+                <div className="features__slider-single">
                     <div className="row items-gap align-items-center">
                       <div className="">
                         <div className="features__single-item">
                           <span className="tag">Reason #1</span>
                           <div className="content">
                             <h2 className="h2">
-                              Be Among the First
+                            Get Free Access For Life
                             </h2>
                             <p>
-                              Get exclusive access to the app before it's released to the public. Be one of the very first to experience BusyBar and its innovative features firsthand.
+                            Enjoy unlimited access forever! Gain free lifetime entry and take advantage of exclusive benefits, premium features, and endless opportunities without any restrictions.
+
                             </p>
                             <Link href="#contactus">
                               get started now
@@ -135,6 +139,34 @@ const Features = () => {
                             </p>
                             <Link href="#contactus">
                               Request A Demo
+                              <i className="tech-arrow-top"></i>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-12 col-xl-3 d-none d-xl-block">
+                        <div className="feature__thumb text-center">
+                          {/* <Image src={Thumb} alt="Image" /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="features__slider-single">
+                    <div className="row items-gap align-items-center">
+                      <div className="">
+                        <div className="features__single-item">
+                          <span className="tag">Reason #5</span>
+                          <div className="content">
+                            <h2 className="h2">
+                              Be Among the First
+                            </h2>
+                            <p>
+                              Get exclusive access to the app before it's released to the public. Be one of the very first to experience BusyBar and its innovative features firsthand.
+                            </p>
+                            <Link href="#contactus">
+                              get started now
                               <i className="tech-arrow-top"></i>
                             </Link>
                           </div>

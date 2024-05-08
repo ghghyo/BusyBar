@@ -45,38 +45,50 @@
 // banner two
 
 .banner-two {
-  padding: 150px 0px 20px;
+  padding: 300px 0px 0px;
   overflow: hidden !important;
   position: relative;
   background-image: url("../../../public/images/banner/banner-two-bg-light.png");
-  background-size: auto 100%;
+  background-size: auto 80%;
   background-position: center center;
   background-repeat: no-repeat;
+
   &::before {
     content: "";
     position: absolute;
-    top: 15%;
-    left: 80%;
-    @include box(100px);
-    background: url("../../../public/images/banner/circle.png");
+    top: 17%;
+    left: 45%;
+    @include box(150px);
+    background: url("../../../public/images/banner/disco-ball-disco.gif");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
     animation: anime 12s ease-in-out infinite alternate-reverse;
+
+    // Media queries for small screens
+    @media (max-width: 600px) {
+      left: 40%;
+      @include box(70px); // Smaller size for smaller screens
+    }
+
+    // Media queries for larger screens
+    @media (min-width: 601px) {
+      left: 45%;
+      @include box(150px); // Restore larger size for larger screens
+    }
   }
 
   .banner-two__content {
     text-align: center;
+
     h2 {
       background: linear-gradient(90.05deg, #e0013f 23.44%, #7600ab 99.98%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-top: 30px;
-      
     }
-
 
     p {
       max-width: 1000px;
@@ -92,6 +104,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
     p {
       text-align: center;
       font-size: 14px;
@@ -141,14 +154,13 @@
       transform: translateX(-50%);
       animation-direction: reverse;
     }
-    // add image here
+
     .six {
       bottom: 0px;
       left: 70%;
       transform: translateX(-50%);
       animation-direction: reverse;
     }
-
   }
 }
 

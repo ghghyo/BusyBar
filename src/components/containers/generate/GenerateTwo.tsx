@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Thumb from 'public/images/generate/view2.jpg';
 import Thumb2 from 'public/images/generate/view1.png';
 import Anime from 'public/images/anime-four.png';
+import Link from 'next/link';
 
 //TODO code needs adjustments for images in mobile mode
 const GenerateTwo = () => {
@@ -38,9 +39,9 @@ const GenerateTwo = () => {
             <div className="generate__content" >
               <div className="section__header text-start">
                 <h3 className="h2">
-                Wherever you are in
+                The Nightlife In   
                   <span className="grd" > {cityName}</span>
-                  , never miss out on the hottest venues  tailored to your mood.
+                  , Is PACKED Tonight. Discover The Hottest Bars Tailored To Your Mood.
                 </h3>
               </div>
               <div>
@@ -56,7 +57,7 @@ const GenerateTwo = () => {
                   <div className="content">
                     <h5 className="h5">Sign Up & Start Exploring</h5>
                     <p>
-                    Embark on your adventure with a quick sign-up! Dive into a world of endless exploration and excitement as you uncover hidden gems and thrilling experiences.
+                    Begin your adventure with a free sign-up. Dive into the world of your cities thrilling nightlife experience as you explore and uncover hidden gems, bars, pubs, and clubs.
                     </p>
                   </div>
                   
@@ -71,9 +72,9 @@ const GenerateTwo = () => {
                     <i className="tech-cart"></i>
                   </div>
                   <div className="content">
-                    <h5 className="h5">Discover Venues & Vibe</h5>
+                    <h5 className="h5">Choose the Vibe & Discover the Perfect Venue</h5>
                     <p>
-                    Navigate effortlessly through a diverse array of venues and discover the perfect vibe for your night out! From intimate hideaways to bustling hotspots, find the ideal setting to match your mood.
+                    Discover your city effortlessly, whether you want to kick it back and chill, party like a nightlife animal or want us to help you explore hidden gems and bustling hotspots - Busy Bar will find the perfect setting to match your vibe.
                     </p>
                   </div>
                   
@@ -90,10 +91,10 @@ const GenerateTwo = () => {
                     
                   </div>
                   <div className="content">
-                    <h5 className="h5">Monitor Crowd Flow & Peak Times </h5>
+                    <h5 className="h5">Unlock Crowd Monitoring & Watch Peak Times</h5>
                     
                     <p>
-                    Stay ahead of the curve with real-time crowd monitoring! Easily gauge the flow of people and identify peak times to ensure you're always at the heart of the action, minus the crowds.
+                    Navigate the buzz at any bar effortlessly with real-time crowd monitoring. Stay ahead of peak times to find the perfect spot, avoid long waits, or ensure you're always at the heart of the action.
                     </p>
                   </div>
                   
@@ -110,7 +111,7 @@ const GenerateTwo = () => {
                   <div className="content">
                     <h5 className="h5">Share the Buzz With Friends</h5>
                     <p>
-                    Spread the excitement and amplify the fun with friends! Seamlessly share your favorite spots and unforgettable moments, turning every outing into an epic adventure.
+                    Spread the excitement and amplify the fun with friends! Seamlessly share your favorite spots and unforgettable moments, turning every night into an epic adventure.
                     </p>
                   </div>
                   
@@ -161,6 +162,7 @@ const GenerateTwo = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

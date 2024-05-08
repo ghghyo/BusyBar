@@ -20,9 +20,9 @@ const Publish = () => {
 
                   >
                     <h2 className="h2">
-                      You choose the mood, we create the crowd
+                      You choose the mood, <br /> we create the crowd
                     </h2>
-                    <p className="grd">Whether you're in need of a laidback mimosa, or want to feed your inner party animal, we've got the best spots for you.</p>
+                    <p className="grd">Whether you're craving a laid-back mimosa or looking to unleash your inner party animal, we have the perfect spots waiting for you.</p>
                   </div>
                 </div>
               </div>
@@ -43,7 +43,7 @@ const Publish = () => {
                     <div className="content">
                       <h5 className="h5">LaidBack & Chill</h5>
                       <p>
-                        Relaxation meets exploration! Dsicover personalized tranquil spots perfect for your laidback vibes
+                      Relaxation meets exploration! Personalized spots perfectly suited to your laid-back vibe
                       </p>
                     </div>
                   </div>
@@ -64,7 +64,7 @@ const Publish = () => {
                     <div className="content">
                       <h5 className="h5">Nightlife & Clubbing</h5>
                       <p>
-Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBar guides you to the hottest spots for unforgettable nights your legendary nightlife adventure starts here!
+                      Immerse yourself in the city's nightlife pulse! From trendy bars to exclusive venues, BusyBar guides you to the hottest spots for unforgettable nights.
                       </p>
                     </div>
                   </div>
@@ -85,7 +85,7 @@ Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBa
                     <div className="content">
                       <h5 className="h5">Discover your city</h5>
                       <p>
-            Dive into an exhilarating urban journey! Let us be your guide with curated recommendations and insider inishgts. Discover hidden gems, unlock city secrets, and immerse yourself in vibrant culture, rich history, and tantalizing flavors.
+                      Discover hidden gems alongside renowned bars, clubs, and pubs. Unveil city secrets and immerse yourself in the vibrant nightlife culture.
                       </p>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ Dive into the city's nightlife pulse! from trendy bars to exclusive bars, BusyBa
                 className="section__content-cta text-center"
               >
                 <Link href="#contactus" className="btn btn--senary ">
-                  Become a tester
+                  Get Free Access For Life
                 </Link>
                 <Image src={Frame} alt="Image" />
               </div>

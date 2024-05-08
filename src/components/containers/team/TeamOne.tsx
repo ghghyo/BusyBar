@@ -40,8 +40,9 @@ const TeamOne = () => {
         <div className="row">
           <div className="col-12">
             <div className="section__header" >
-              <h4 className="h2">See why our beta testers can't get enough!</h4>
-              <p className="grd"> Join a vibrant community of urban explorers who rave about our app's simplicity and awesomeness.</p>
+              <h4 className="h2 mt-4">Our Beta Testers Love Us!</h4>
+              <p className="grd"> Explore Why Our Community Of Nightlife Kings & Queens Can’t Stop Talking About Busy Bar
+</p>
             </div>
           </div>
         </div>
