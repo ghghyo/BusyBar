@@ -21,7 +21,7 @@ const AboutSponsor = () => {
 
             >
               <div className="section__header">
-                <h4 className="h4">Past experiences our users have tried</h4>
+                <h4 className="h4">Cities we are located</h4>
               </div>
               <div className="row">
                 <div className="col-12">
@@ -51,15 +51,46 @@ const AboutSponsor = () => {
                     }}
                   >
                     <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Bose} priority alt="Image" />
-                      </div>
+                    <div className="section__header">
+                <h4 className="h4">DC</h4>
+              </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Amazon} priority alt="Image" />
-                      </div>
+                    <div className="section__header">
+                <h4 className="h4">Seattle</h4>
+              </div>
                     </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="section__header">
+                <h4 className="h4">Berlin</h4>
+              </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="section__header">
+                <h4 className="h4">NYC</h4>
+              </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="section__header">
+                <h4 className="h4">Miami</h4>
+              </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="section__header">
+                <h4 className="h4">LA</h4>
+              </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="section__header">
+                <h4 className="h4">Vegas</h4>
+              </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                    <div className="section__header">
+                <h4 className="h4">Denver</h4>
+              </div>
+                    </SwiperSlide>
+                    {/*
                     <SwiperSlide>
                       <div className="sponsor__slider-item">
                         <Image src={Microsoft} priority alt="Image" />
@@ -80,36 +111,7 @@ const AboutSponsor = () => {
                         <Image src={Toyota} priority alt="Image" />
                       </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Bose} priority alt="Image" />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Amazon} priority alt="Image" />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Microsoft} priority alt="Image" />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Netflix} priority alt="Image" />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Samsung} priority alt="Image" />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="sponsor__slider-item">
-                        <Image src={Toyota} priority alt="Image" />
-                      </div>
-                    </SwiperSlide>
+                  */}
                   </Swiper>
                 </div>
               </div>

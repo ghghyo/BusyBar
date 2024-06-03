@@ -14,7 +14,7 @@ const Features = () => {
     <section className="section features">
       
       <div className="section__header">
-        <h2 className="grd">More Reasons Why You Should Become A Better Tester</h2>
+        <h2 className="grd">More Reasons Why You Should Become A Beta Tester</h2>
         {/*
         <p className="grd"> Elevate your nightlife experience! <br></br>Sign up now to secure your spot on the waitlist and revolutionize the way you explore the city after dark.</p>
   */}

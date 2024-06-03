@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState,FormEvent, useEffect } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import {db} from '@/components/containers/utils/firebase';
+import Form from "@/components/containers/sponsor/Form";
 import One from "public/images/banner/anime-one.png";
 import Two from "public/images/banner/anime-two.png";
 import Three from "public/images/banner/anime-three.png";
@@ -12,7 +13,7 @@ import Five from "public/images/banner/anime-five.png";
 import TypedText from "./TypedText";
 
 const BannerTwo = () => {
-  const strings = ["Real-Time Crowd Monitoring", "Personalized Recommendations", "Get Busy With Busy Bar"];
+  const strings = ["Real-Time Crowd Monitoring", "Night-Out Decisions Made Easy", "Get Busy With Busy Bar"];
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [cityName, setCityName] = useState<string>('Loading...'); // State to hold the city name
 
@@ -64,7 +65,7 @@ const BannerTwo = () => {
 
   return (
     <section className="section banner-two">
-      <div className="container">
+      <div className="container mt-4">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-9">
             <div
@@ -86,43 +87,47 @@ const BannerTwo = () => {
                 </span>
               </h2>
               <p className="text-md">
-              Discover hidden gems and enjoy your night out in {cityName} like never before.
+              Find the people and enjoy your night out in {cityName} like never before.
               </p>
-              <section className="section reduced-margin-top ">
-                <div className="container d-flex justify-content-center ">
+              <section className="section contact-main reduced-margin-top">
+                <div className="container d-flex justify-content-center">
                     <div className="col-12 col-lg-6 col-xxl-6 ">
                     {isSubmitted ? (
               <p className="text-xl text-center font-bold">Form submitted! We will get back to you shortly.</p> 
             ) : (
+                        <div
+                            className="contact-main__form mt-4"
 
-                                  <form method="POST" onSubmit={handleSubmit}>
-                                      <div className="group-input rounded-full mt-4 bg-gray-100">
-                                          <input
-                                              type="email"
-                                              name="contact-email"
-                                              id="contactEmail"
-                                              placeholder="Enter your email"
-                                              value={email}
-                                              onChange={(e) => setEmail(e.target.value)}
-                                              required
-                                              className="w-full py-3 px-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-blue-500"
-                                          />
-                                      </div>
+                        >
+                            <form method="POST" onSubmit={handleSubmit}>
 
-                                
-                                    <div className="section__content-cta justify-center text-center">
+                                <div
+                                    className="group-input"
+
+                                >
+                                    <input
+                                        type="email"
+                                        name="contact-email"
+                                        id="contactEmail"
+                                        placeholder="Enter your email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required />
+                                </div>
+
+                                <div className="section__content-cta justify-center text-center">
                                         <button type="submit" className="btn btn--senary">
-                                        Get Free Access 
+                                        Get Free Access
                                             
                                         </button>
                                     </div>
                                     
                             </form>
+                        </div>
             )}
                     </div>
                 </div>
             </section>
-
             </div>
           </div>
         </div>

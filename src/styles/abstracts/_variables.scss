@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 // font family
-$space-grotesk: "Space Grotesk", sans-serif;
+$space-grotesk: "Space Grotesk", system-ui; //old font: sans-serif instead of system-ui
 
 // theme default
 $theme-font: $space-grotesk;

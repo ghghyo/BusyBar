@@ -14,24 +14,24 @@ const TeamOne = () => {
   const reviews = [
     { name: "Sarah H.", age: 28, profession: "Event Planner", review: "This app's a game-changer for my nights out! Seriously, it's made finding cool spots a breeze.", rating: 5 },
     { name: "Michael S.", age: 30, profession: "Graphic Designer", review: "Love how easy this app is to use. It's like having a buddy who knows all the best places in town.", rating: 5 },
-    { name: "Emily B.", age: 26, profession: "Nurse", review: "This app's saved my bacon so many times! Crowds can be a pain, but this thing helps me dodge 'em like a pro.", rating: 4.5 },
-    { name: "Jason M.", age: 32, profession: "Software Engineer", review: "Planning nights out's never been easier. Me and my buddies can find clubs that match our vibe in no time.", rating: 5 },
-    { name: "Lauren C.", age: 27, profession: "Marketing Manager", review: "Waitlist? Totally worth it! This app's my go-to for exploring the city after dark.", rating: 5 },
+    { name: "Emily B.", age: 26, profession: "Nurse", review: "I just love how theres no argument of where to go, Busybar has always found the right place or area to go out when my girls ask where are we going", rating: 4.5 },
+    { name: "Jason M.", age: 32, profession: "Software Engineer", review: "Planning nights out's never been easier. Me and my buddies can find clubs that are a vibe in no time.", rating: 5 },
+    { name: "Lauren C.", age: 27, profession: "Marketing Manager", review: "Finds me places that I would never expect to be busy", rating: 5 },
     { name: "Alex W.", age: 29, profession: "Product Tester", review: "Been beta testing for a while now, and I gotta say, the team behind this app's on it! They really listen to what we say.", rating: 4.5 },
-    { name: "Rachel T.", age: 31, profession: "Journalist", review: "Found some seriously cool bars thanks to this app. Feels like I've got a local showing me around!", rating: 4.8 },
+    { name: "Rachel T.", age: 31, profession: "Journalist", review: "Going out was hard on a Sunday, but I definitely think I found the best place for the night", rating: 4.8 },
     { name: "Daniel L.", age: 25, profession: "Financial Analyst", review: "Coordinating with friends is a breeze with this app. Plus, real-time crowd updates? Lifesaver!", rating: 4.7 },
-    { name: "Jessica P.", age: 33, profession: "Interior Designer", review: "Can't imagine my nightlife without this app now. It's like it knows exactly what I'm in the mood for.", rating: 4.8 },
+    { name: "Jessica P.", age: 33, profession: "Interior Designer", review: "Can't imagine my nightlife without this app now. It's like it knows exactly where I need to start my night.", rating: 4.8 },
     { name: "Ryan G.", age: 28, profession: "Chef", review: "Tried a bunch of other apps, but none of 'em come close to this one. It's simple, it's awesome, and it gets the job done!", rating: 5 },
     { name: "Kevin R.", age: 30, profession: "Sales Manager", review: "Beta testing's been a blast! This app's like having a friend who's always got the inside scoop on the best places to go.", rating: 4.6 },
     { name: "Adam T.", age: 34, profession: "Lawyer", review: "No more guesswork with this app. Crowd predictions are spot-on, which means more time having fun and less time waiting in line!", rating: 4.9 },
-    { name: "Brandon K.", age: 26, profession: "Photographer", review: "Feels like I'm discovering something new every time I open this app. Seriously, it's like a treasure hunt for awesome spots!", rating: 4.7 },
+    { name: "Brandon K.", age: 26, profession: "Photographer", review: "I love being able to find places in calm areas in the city", rating: 4.7 },
     { name: "Matthew J.", age: 29, profession: "Fitness Trainer", review: "Been waiting for an app like this, and it's finally here. Makes me feel like a nightlife expert without even trying!", rating: 4.8 },
     { name: "Nathan S.", age: 33, profession: "Event Coordinator", review: "Been singing this app's praises to all my friends. If you love a good night out, you gotta give it a try!", rating: 4.9 },
-    { name: "Olivia L.", age: 27, profession: "Graphic Designer", review: "As a graphic designer, aesthetics matter, and this app nails it! It's like having a personal concierge for nightlife.", rating: 4.7 },
-    { name: "Ethan M.", age: 31, profession: "Software Developer", review: "This app simplifies our group outings so much! We can finally avoid the places that don't fit our vibe.", rating: 4.6 },
+    { name: "Olivia L.", age: 27, profession: "Graphic Designer", review: "Every night isnt perfect, but busybar always seems to know where I will find friends", rating: 4.7 },
+    { name: "Ethan M.", age: 31, profession: "Software Developer", review: "This app simplifies our group outings so much! We can finally avoid the places that arent busy.", rating: 4.6 },
     { name: "Megan R.", age: 29, profession: "Marketing Analyst", review: "Nights out are stress-free now, thanks to this app. It's like having a cheat code to navigate the city's nightlife.", rating: 4.9 },
-    { name: "Hannah W.", age: 28, profession: "Event Planner", review: "I plan events for a living, and this app is a game-changer. It's become my secret weapon for organizing great nights.", rating: 5 },
-    { name: "Tyler S.", age: 32, profession: "Musician", review: "This app is gold for finding new venues to perform at. It's like it knows exactly what kind of crowd we want to reach.", rating: 4.8 }
+    { name: "Hannah W.", age: 28, profession: "Event Planner", review: "I plan events for a living, and this app is a game-changer. It's become my secret weapon for organizing great nights where I know I can find the crowd.", rating: 5 },
+    
   ];
 
   return (
@@ -96,7 +96,7 @@ const TeamOne = () => {
                 </div>
                 <div className="review-meta">
                   <div className="thumb">
-                    <Image src={review.rating >= 4.8 ? ThumbThree : review.rating >= 4.6 ? ThumbTwo : ThumbOne} alt="Image" />
+                   {/* <Image src={review.rating >= 4.8 ? ThumbThree : review.rating >= 4.6 ? ThumbTwo : ThumbOne} alt="Image" /> */}
                   </div>
                   <div className="content">
                     <p className="h6">{review.name}</p>

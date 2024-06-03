@@ -57,7 +57,7 @@ const GenerateTwo = () => {
                   <div className="content">
                     <h5 className="h5">Sign Up & Start Exploring</h5>
                     <p>
-                    Begin your adventure with a free sign-up. Dive into the world of your cities thrilling nightlife experience as you explore and uncover hidden gems, bars, pubs, and clubs.
+                    This app was created by our team with the intent to remain completely free of charge. We built it for us, and honestly we wouldnt want to pay. Dive into the world of your cities thrilling nightlife experience as you explore and uncover hidden gems, bars, pubs, and clubs all for free ... for life
                     </p>
                   </div>
                   
