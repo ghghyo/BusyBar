@@ -1,15 +1,13 @@
-// pages/api/location.ts
-
-import { geolocation } from '@vercel/edge';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 export const config = {
   runtime: 'edge',
 };
 
-export default function handler(request: Request) {
-  const { city } = geolocation(request);
-  console.log(city)
-  return new Response(JSON.stringify({ city }), {
-    headers: { 'content-type': 'application/json' },
-  });
+export default function handler(req: NextRequest) {
+  const geo = req.geo || {};
+  const city = geo.city || 'Unknown City';
+
+  return NextResponse.json({ city });
 }
