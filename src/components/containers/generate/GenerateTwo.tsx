@@ -13,7 +13,7 @@ const GenerateTwo = () => {
     try {
       const response = await fetch('/api/location');
       const data = await response.json();
-      console.log(data.city);
+      console.log(data.city)
       setCityName(data.city || 'Unknown Location');
     } catch (error) {
       console.error('Failed to fetch city name:', error);
@@ -24,7 +24,6 @@ const GenerateTwo = () => {
   useEffect(() => {
     fetchCityName();
   }, []);
-
   const handleTabClick = (index: number) => {
     setActiveTabIndex(index);
   };

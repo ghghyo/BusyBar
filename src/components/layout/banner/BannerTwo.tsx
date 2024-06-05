@@ -50,7 +50,7 @@ const BannerTwo = () => {
     try {
       const response = await fetch('/api/location');
       const data = await response.json();
-      console.log(data)
+      console.log(data.city);
       setCityName(data.city || 'Unknown Location');
     } catch (error) {
       console.error('Failed to fetch city name:', error);
@@ -59,7 +59,7 @@ const BannerTwo = () => {
   };
 
   useEffect(() => {
-    fetchCityName(); // Fetch city name when component mounts
+    fetchCityName();
   }, []);
 
 
