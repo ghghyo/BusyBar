@@ -3,19 +3,17 @@ import Image from 'next/image';
 import Thumb from 'public/images/generate/view2.jpg';
 import Thumb2 from 'public/images/generate/view1.png';
 import Anime from 'public/images/anime-four.png';
-import Link from 'next/link';
 
-//TODO code needs adjustments for images in mobile mode
 const GenerateTwo = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [cityName, setCityName] = useState<string>('Loading...'); // State to hold the city name
+  const [cityName, setCityName] = useState<string>('Loading...');
 
   // Function to fetch city name from the API
   const fetchCityName = async () => {
     try {
       const response = await fetch('/api/location');
       const data = await response.json();
-      console.log(data)
+      console.log(data);
       setCityName(data.city || 'Unknown Location');
     } catch (error) {
       console.error('Failed to fetch city name:', error);
@@ -24,7 +22,7 @@ const GenerateTwo = () => {
   };
 
   useEffect(() => {
-    fetchCityName(); // Fetch city name when component mounts
+    fetchCityName();
   }, []);
 
   const handleTabClick = (index: number) => {
@@ -36,133 +34,83 @@ const GenerateTwo = () => {
       <div className="container">
         <div className="row items-gap">
           <div className="col-12 col-lg-7 col-xl-7">
-            <div className="generate__content" >
+            <div className="generate__content">
               <div className="section__header text-start">
                 <h3 className="h2">
-                The Nightlife In   
-                  <span className="grd" > {cityName}</span>
-                  , Is PACKED Tonight. Discover The Hottest Bars Tailored To Your Mood.
+                  The Nightlife In
+                  <span className="grd"> {cityName}</span>, Is PACKED Tonight. Discover The Hottest Bars Tailored To Your Mood.
                 </h3>
               </div>
               <div>
-                <div
-                  className={`generate__content-btn ${
-                    activeTabIndex === 0 ? "generate__content-btn-active" : ""
-                  }`}
-                  onClick={() => handleTabClick(0)}
-                >
-                  <div className="thumb">
-                    <i className="tech-pen"></i>
+                {[
+                  {
+                    icon: "tech-pen",
+                    title: "Sign Up & Start Exploring",
+                    content:
+                      "This app was created by our team with the intent to remain completely free of charge. We built it for us, and honestly we wouldn't want to pay. Dive into the world of your city's thrilling nightlife experience as you explore and uncover hidden gems, bars, pubs, and clubs all for free ... for life.",
+                  },
+                  {
+                    icon: "tech-cart",
+                    title: "Choose the Vibe & Discover the Perfect Venue",
+                    content:
+                      "Discover your city effortlessly, whether you want to kick it back and chill, party like a nightlife animal, or want us to help you explore hidden gems and bustling hotspots - Busy Bar will find the perfect setting to match your vibe.",
+                  },
+                  {
+                    icon: "tech-mike",
+                    title: "Unlock Crowd Monitoring & Watch Peak Times",
+                    content:
+                      "Navigate the buzz at any bar effortlessly with real-time crowd monitoring. Stay ahead of peak times to find the perfect spot, avoid long waits, or ensure you're always at the heart of the action.",
+                  },
+                  {
+                    icon: "tech-globe",
+                    title: "Share the Buzz With Friends",
+                    content:
+                      "Spread the excitement and amplify the fun with friends! Seamlessly share your favorite spots and unforgettable moments, turning every night into an epic adventure.",
+                  },
+                ].map((tab, index) => (
+                  <div
+                    key={index}
+                    className={`generate__content-btn ${
+                      activeTabIndex === index ? "generate__content-btn-active" : ""
+                    }`}
+                    onClick={() => handleTabClick(index)}
+                  >
+                    <div className="thumb">
+                      <i className={tab.icon}></i>
+                    </div>
+                    <div className="content">
+                      <h5 className="h5">{tab.title}</h5>
+                      <p>{tab.content}</p>
+                    </div>
                   </div>
-                  <div className="content">
-                    <h5 className="h5">Sign Up & Start Exploring</h5>
-                    <p>
-                    This app was created by our team with the intent to remain completely free of charge. We built it for us, and honestly we wouldnt want to pay. Dive into the world of your cities thrilling nightlife experience as you explore and uncover hidden gems, bars, pubs, and clubs all for free ... for life
-                    </p>
-                  </div>
-                  
-                </div>
-                <div
-                  className={`generate__content-btn ${
-                    activeTabIndex === 1 ? "generate__content-btn-active" : ""
-                  }`}
-                  onClick={() => handleTabClick(1)}
-                >
-                  <div className="thumb">
-                    <i className="tech-cart"></i>
-                  </div>
-                  <div className="content">
-                    <h5 className="h5">Choose the Vibe & Discover the Perfect Venue</h5>
-                    <p>
-                    Discover your city effortlessly, whether you want to kick it back and chill, party like a nightlife animal or want us to help you explore hidden gems and bustling hotspots - Busy Bar will find the perfect setting to match your vibe.
-                    </p>
-                  </div>
-                  
-                </div>
-                <div
-                  className={`generate__content-btn ${
-                    activeTabIndex === 2 ? "generate__content-btn-active" : ""
-                  }`}
-                  onClick={() => handleTabClick(2)}
-                >
-                  
-                  <div className="thumb">
-                    <i className="tech-mike"></i>
-                    
-                  </div>
-                  <div className="content">
-                    <h5 className="h5">Unlock Crowd Monitoring & Watch Peak Times</h5>
-                    
-                    <p>
-                    Navigate the buzz at any bar effortlessly with real-time crowd monitoring. Stay ahead of peak times to find the perfect spot, avoid long waits, or ensure you're always at the heart of the action.
-                    </p>
-                  </div>
-                  
-                </div>
-                <div
-                  className={`generate__content-btn ${
-                    activeTabIndex === 3 ? "generate__content-btn-active" : ""
-                  }`}
-                  onClick={() => handleTabClick(3)}
-                >
-                  <div className="thumb">
-                    <i className="tech-globe"></i>
-                  </div>
-                  <div className="content">
-                    <h5 className="h5">Share the Buzz With Friends</h5>
-                    <p>
-                    Spread the excitement and amplify the fun with friends! Seamlessly share your favorite spots and unforgettable moments, turning every night into an epic adventure.
-                    </p>
-                  </div>
-                  
-                </div>
-                
+                ))}
               </div>
-              
             </div>
-
           </div>
           <div className="col-12 col-lg-5 col-xl-5">
-            <div
-              className="generate__thumb"
-            >
-              <div
-                className={`tab-content ${
-                  activeTabIndex === 0 ? "active" : ""
-                }`}
-              >
-                <Image src={Thumb} alt="image" style={{ height: '900px' }} />
-              </div>
-              <div
-                className={`tab-content ${
-                  activeTabIndex === 1 ? "active" : ""
-                }`}
-              >
-                <Image src={Thumb2} alt="image" style={{ height: '900px' }} />
-              </div>
-              <div
-                className={`tab-content ${
-                  activeTabIndex === 2 ? "active" : ""
-                }`}
-              >
-                <Image src={Thumb} alt="image" style={{ height: '900px' }}  />
-              </div>
-              <div
-                className={`tab-content ${
-                  activeTabIndex === 3 ? "active" : ""
-                }`}
-              >
-                <Image src={Thumb} alt="image" style={{ height: '900px' }}  />
-              </div>
+            <div className="generate__thumb">
+              {[
+                Thumb,
+                Thumb2,
+                Thumb,
+                Thumb,
+              ].map((imageSrc, index) => (
+                <div
+                  key={index}
+                  className={`tab-content ${
+                    activeTabIndex === index ? "active" : ""
+                  }`}
+                >
+                  <Image src={imageSrc} alt="image" style={{ height: '900px' }} />
+                </div>
+              ))}
               <div className="anime">
-                <Image src={Anime} alt="Image"  style={{ height: '900px' }}  />
+                <Image src={Anime} alt="Image" style={{ height: '900px' }} />
               </div>
-              
             </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 };
