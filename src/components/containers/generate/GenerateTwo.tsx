@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Thumb from 'public/images/generate/view2.jpg';
-import Thumb2 from 'public/images/generate/view1.png';
+import Thumb from 'public/images/generate/view1.svg';
+import Thumb2 from 'public/images/generate/view2.svg';
+import Thumb3 from 'public/images/generate/view3.svg';
+import Thumb4 from 'public/images/generate/view4.svg';
 import Anime from 'public/images/anime-four.png';
 
 const GenerateTwo = () => {
@@ -91,8 +93,8 @@ const GenerateTwo = () => {
               {[
                 Thumb,
                 Thumb2,
-                Thumb,
-                Thumb,
+                Thumb3,
+                Thumb4,
               ].map((imageSrc, index) => (
                 <div
                   key={index}

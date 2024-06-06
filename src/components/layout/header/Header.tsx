@@ -170,6 +170,7 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                     </li>
 
                   </ul>
+                  {/*
                   <div className="social">
                     <Link href="/" aria-label="social media">
                       <i className="fa-brands fa-facebook-f"></i>
@@ -184,6 +185,7 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                       <i className="fa-brands fa-instagram"></i>
                     </Link>
                   </div>
+                */}
                 </div>
                 <div className="nav__uncollapsed">
                   <div className="nav__uncollapsed-item d-none d-md-flex">
