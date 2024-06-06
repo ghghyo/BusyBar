@@ -54,7 +54,7 @@ const Features = () => {
 
                             </p>
                             <Link href="#contactus">
-                              get started now
+                            Sign Up Today
                               <i className="tech-arrow-top"></i>
                             </Link>
                           </div>
@@ -82,7 +82,7 @@ const Features = () => {
                               As a waitlist member, you'll receive special perks and privileges, including early access to updates, sneak peeks at upcoming features, and more.
                             </p>
                             <Link href="#contactus">
-                              join now
+                            Sign Up Today
                               <i className="tech-arrow-top"></i>
                             </Link>
                           </div>
@@ -110,7 +110,7 @@ const Features = () => {
                               Your feedback matters! By joining the waitlist, you'll have the opportunity to provide valuable input and help shape the direction of the app.
                             </p>
                             <Link href="#contactus">
-                              Lets get going
+                            Sign Up Today
                               <i className="tech-arrow-top"></i>
                             </Link>
                           </div>
@@ -138,7 +138,7 @@ const Features = () => {
                               Explore the city like never before with our app's curated selection of top-notch venues and events. Uncover hidden gems and create unforgettable memories with friends.
                             </p>
                             <Link href="#contactus">
-                              Request A Demo
+                              Sign Up Today
                               <i className="tech-arrow-top"></i>
                             </Link>
                           </div>
@@ -166,7 +166,7 @@ const Features = () => {
                               Get exclusive access to the app before it's released to the public. Be one of the very first to experience BusyBar and its innovative features firsthand.
                             </p>
                             <Link href="#contactus">
-                              get started now
+                            Sign Up Today
                               <i className="tech-arrow-top"></i>
                             </Link>
                           </div>

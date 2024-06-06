@@ -9,6 +9,7 @@ import FooterThree from "./footer/FooterThree";
 import FooterTwoLight from "./footer/FooterTwoLight";
 import FooterThreeLight from "./footer/FooterThreeLight";
 import ScrollProgress from "./ScrollProgress";
+import { Analytics } from "@vercel/analytics/react"
 
 type layoutProps = {
   children: React.ReactNode;
@@ -54,6 +55,7 @@ const Layout = ({ children, header, footer }: layoutProps) => {
         <meta name="keywords" content="bar, ai, nightlife" />
         <meta name="description" content="AI Busiest Bar Tool" />
       </Head>
+      <Analytics />
       <div className={`${combinedClasses}${openNav ? " body-active" : " "}`}>
         {header && (
           <Header

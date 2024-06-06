@@ -147,16 +147,7 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                         className={`nav__menu-link hide-nav${openNav ? ' mb-4' : ''}`}
                         onClick={closeNav}
                       >
-                        About
-                      </Link>
-                    </li>
-                    <li className="nav__menu-item">
-                      <Link
-                        href="#faqtwolight"
-                        className="nav__menu-link hide-nav"
-                        onClick={closeNav}
-                      >
-                        FAQ
+                        Discover
                       </Link>
                     </li>
                     <li className="nav__menu-item">
@@ -165,9 +156,19 @@ const Header = ({ openNav, handleNav, setOpenNav }: HeaderProps) => {
                         className="nav__menu-link hide-nav"
                         onClick={closeNav}
                       >
-                        Contact Us
+                        Early Access
                       </Link>
                     </li>
+                    <li className="nav__menu-item">
+                      <Link
+                        href="#faqtwolight"
+                        className="nav__menu-link hide-nav"
+                        onClick={closeNav}
+                      >
+                        FAQ's
+                      </Link>
+                    </li>
+
                   </ul>
                   <div className="social">
                     <Link href="/" aria-label="social media">

@@ -71,12 +71,13 @@ const HomeTwoLight = () => {
       {/*<TourTwoLight /> */}
       <hr id="horizon-break" />
       <Features />
+      <AboutSponsor />
       {/*<PricingOne />*/}
       <div id="faqtwolight">
         <FaqTwoLight />
       </div>
       
-      <AboutSponsor />
+
 
       {/*
       <CtaTwoLight />

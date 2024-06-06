@@ -113,6 +113,9 @@ const AboutSponsor = () => {
                     </SwiperSlide>
                   */}
                   </Swiper>
+                 
+                <h4 className="h6 text-white justify-center text-center">Coming to a city near you!</h4>
+              
                 </div>
               </div>
             </div>

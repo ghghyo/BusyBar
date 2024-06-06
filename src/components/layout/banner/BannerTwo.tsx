@@ -117,9 +117,10 @@ const BannerTwo = () => {
 
                                 <div className="section__content-cta justify-center text-center">
                                         <button type="submit" className="btn btn--senary">
-                                        Get Free Access
+                                        Get Early Access
                                             
                                         </button>
+                                         <p> Free Forever For The First 1,000 Sign Ups </p>
                                     </div>
                                     
                             </form>

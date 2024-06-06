@@ -37,26 +37,26 @@ const FooterTwoLight = () => {
                 <span id="copyYear"> {currentYear} </span>
                 <Link href="/">BusyBar</Link>
               </p>
-              <div className="social">
+              {/* <div className="social">
                 <Link href="/" aria-label="social media"><i className="fa-brands fa-facebook-f"></i></Link>
                 <Link href="/" aria-label="social media"><i className="fa-brands fa-twitter"></i></Link>
                 <Link href="/" aria-label="social media"><i className="fa-brands fa-linkedin-in"></i></Link>
                 <Link href="/" aria-label="social media"><i className="fa-brands fa-instagram"></i></Link>
-              </div>
+  </div> */}
             </div>
           </div>
           <div className="col-10 col-xl-2 col-xxl-2">
             <div className="footer-two__single" >
-              <h5 className="h5 ">About BusyBar</h5>
+              <h5 className="h5 "> BusyBar Quick Links</h5>
               <ul>
                 <li>
-                  <Link href="/#aboutus">About</Link>
+                  <Link href="/#aboutus">Discover</Link>
                 </li>
                 <li>
-                  <Link href="#contactus">Register</Link>
+                  <Link href="#contactus">Early Access</Link>
                 </li>
                 <li>
-                  <Link href="#contactus">Contact</Link>
+                  <Link href="#faqtwolight">FAQ's</Link>
                 </li>
               </ul>
             </div>
@@ -93,7 +93,8 @@ const FooterTwoLight = () => {
   */}
           <div className="col-12 col-xl-5 col-xxl-5">
             <div className="footer-two__single" >
-              <h5 className="h5">Get Started</h5>
+              <h5 className="h5">Get exclusive early access</h5>
+              <p>Free For The First 1,000 Sign Ups</p>
               <div className="footer-two__form">
                 <h6 className="h6">Ready to have a great time?</h6>
                 <form onSubmit={handleSubmit}>
@@ -102,7 +103,7 @@ const FooterTwoLight = () => {
                       type="email"
                       name="subscribe-news"
                       id="subscribeNews"
-                      placeholder="Enter Mail"
+                      placeholder="Enter Email"
                       required
                       value={email}
                       onChange={e => setEmail(e.target.value)}
