@@ -93,7 +93,7 @@ const BannerTwo = () => {
                 <div className="container d-flex justify-content-center">
                     <div className="col-12 col-lg-6 col-xxl-6 ">
                     {isSubmitted ? (
-              <p className="text-xl text-center font-bold">Form submitted! We will get back to you shortly.</p> 
+              <p className="text-xl text-center font-bold">Thank you for joining our waitlist! We will be in touch with you soon to invite you to test our app.</p> 
             ) : (
                         <div
                             className="contact-main__form mt-4"
