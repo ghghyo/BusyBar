@@ -14,7 +14,7 @@ const FaqTwoLight = () => {
     {
       question: "How do I get started?",
       answer:
-        "Simply download the app from the App Store or Google Play Store, sign up with your email or social media account, and you're ready to start exploring!",
+        "Enter your email and we will let you know when you have been selected to start using the app",
     },
     {
       question: "How does the app help me find venues?",

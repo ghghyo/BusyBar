@@ -13,7 +13,7 @@ import Five from "public/images/banner/anime-five.png";
 import TypedText from "./TypedText";
 
 const BannerTwo = () => {
-  const strings = ["Real-Time Crowd Monitoring", "Night-Out Decisions Made Easy", "Get Busy With Busy Bar"];
+  const strings = ["Real-Time Crowd Monitoring", "Easy Night-Out Decisions", "Get Busy With Busy Bar"];
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [cityName, setCityName] = useState<string>('Loading...'); // State to hold the city name
 
