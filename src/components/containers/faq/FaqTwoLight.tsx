@@ -14,7 +14,7 @@ const FaqTwoLight = () => {
     {
       question: "How do I get started?",
       answer:
-        "Enter your email and we will let you know when you have been selected to start using the app",
+        "Provide your email and we will let you know when you have been selected to start using the app",
     },
     {
       question: "How does the app help me find venues?",
